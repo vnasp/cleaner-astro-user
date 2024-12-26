@@ -1,0 +1,27 @@
+---
+import heroImage from "assets/hero.jpg";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main
+  class="relative grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24 bg-cover bg-center mb-20"
+  style={`background-image: url(${heroImage.src});`}>
+  <div class="p-8">
+    <h1
+      class="text-4xl text-white lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter text-center lg:text-left">
+      Tu casa lista, siempre a tiempo
+    </h1>
+    <p class="text-lg text-gray-200 mt-4 max-w-xl text-center lg:text-left">
+      Ofrecemos servicios personalizados de limpieza, mantenimiento y abastecimiento para casas de veraneo en la zona lacustre de La Araucanía. Garantizamos comodidad y tranquilidad para dueños y huéspedes, cuidando cada detalle con eficiencia y confianza.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+      <Link
+        href="#"
+        class="bg-brand-primary hover:bg-brand-accent text-white py-3 px-6 rounded-lg flex gap-1 items-center justify-center">
+        <Icon class="w-5 h-5" name="bx:bxs-cloud-download" />
+        Solicita tu presupuesto ahora
+      </Link>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,28 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const locations = [
+  { location: "Villarrica" },
+  { location: "Molco" },
+  { location: "Los Riscos" },
+  { location: "Candelaria" },
+  { location: "Camino al Volcán" },
+  { location: "Pucón" },
+  { location: "Caburgua" }
+];
+---
+
+<section class="mt-24 bg-gray-50 py-12">
+  <h2 class="text-3xl font-bold text-center text-brand-primary mb-8">
+    Localidades que abarcamos en la zona lacustre de La Araucanía
+  </h2>
+  <ul class="flex flex-wrap gap-8 md:gap-16 items-center justify-center">
+    {locations.map((item) => (
+      <li class="flex items-center gap-2 text-slate-700 hover:text-brand-accent transition">
+        <Icon name="bx:bxs-map-pin" width="32" height="32" class="text-brand-primary" />
+        <span class="text-lg font-medium">{item.location}</span>
+      </li>
+    ))}
+  </ul>
+</section>

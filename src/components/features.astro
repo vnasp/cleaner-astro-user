@@ -1,0 +1,86 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Limpieza personalizada según necesidades",
+    description:
+      "Realizamos limpiezas profundas antes de la llegada o después de la partida de dueños o huéspedes. También ofrecemos servicios tras remodelaciones, entre arrendatarios, o entregas de propiedades.",
+    icon: "bx:bxs-spray-can",
+  },
+  {
+    title: "Lavandería y cuidado de textiles",
+    description:
+      "Nos encargamos de llevar a la tintorería plumones, frazadas, cortinas, manteles y otras piezas delicadas. Deja todo en perfectas condiciones para el próximo uso.",
+    icon: "bx:bxs-washer",
+  },
+  {
+    title: "Abastecimiento de insumos básicos",
+    description:
+      "Abastecemos tu casa con artículos esenciales como papel higiénico, jabones, toallas, alimentos básicos y más. Todo estará listo para tu comodidad o la de tus huéspedes.",
+    icon: "bx:bxs-cart",
+  },
+  {
+    title: "Revisión y mantención de climatización",
+    description:
+      "Verificamos el correcto funcionamiento de estufas, chimeneas, calderas y calefactores. Preparamos tu casa para garantizar un ambiente cálido y seguro en cualquier temporada.",
+    icon: "bx:bxs-hot",
+  },
+  {
+    title: "Administración de la propiedad",
+    description:
+      "Gestionamos tu casa para alquileres vacacionales, incluyendo supervisión entre arrendatarios, coordinación de servicios y asistencia con plataformas como Airbnb.",
+    icon: "bx:bxs-home",
+  },
+  {
+    title: "Inventario de la propiedad",
+    description:
+      "Realizamos un registro detallado del mobiliario y objetos de valor, ideal para supervisar el uso y estado entre arrendatarios o durante la ausencia del propietario.",
+    icon: "bx:bx-clipboard",
+  },
+  {
+    title: "Decoración de bienvenida",
+    description:
+      "Decoramos con flores frescas, detalles temáticos o kits de bienvenida para huéspedes especiales.",
+    icon: "bx:bxs-leaf",
+  },
+  {
+    title: "Supervisión periódica",
+    description:
+      "Visitas regulares para garantizar que todo esté en orden durante la temporada baja.",
+    icon: "bx:bxs-calendar-check",
+  },
+  {
+    title: "Mantenimiento exterior",
+    description:
+      "Jardinería básica, limpieza de terrazas y quinchos, o retiro de hojas acumuladas.",
+    icon: "bx:bxs-tree",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Servicios para tu comodidad y tranquilidad
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    En la zona lacustre de La Araucanía, ofrecemos soluciones completas para el cuidado y preparación de casas de veraneo. Desde limpiezas especializadas hasta administración integral, cuidamos cada detalle para que todo esté listo cuando lo necesites.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-brand-primary rounded-full p-2 w-10 h-10 shrink-0">
+          <Icon class="text-white text-2xl" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
